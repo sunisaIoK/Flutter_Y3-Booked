@@ -31,7 +31,7 @@ class _RegisterState extends State<Register> {
 
   Future<void> insertData(
       String id, String passwd, String fname, String lname, String org) async {
-    const apiUrl = 'http://localhost/api.php';
+    const apiUrl = 'http://localhost:3000/api/auth/home_page';
 
     try {
       final response = await http.post(

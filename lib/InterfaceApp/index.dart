@@ -149,7 +149,7 @@ class TableListScreen extends StatelessWidget {
   
   
   Future<String?> fetchReservedBy(int tableNumber) async {
-    const apiUrl = 'http://localhost/management.php'; // เปลี่ยนเป็น URL ของ API ที่ให้บริการการดึงข้อมูลชื่อผู้จอง
+    const apiUrl = 'http://localhost:3000/api/authmanagement'; // เปลี่ยนเป็น URL ของ API ที่ให้บริการการดึงข้อมูลชื่อผู้จอง
 
     try {
       final response = await http.post(
@@ -284,7 +284,7 @@ class _TableBookingScreenState extends State<TableBookingScreen> {
 
 //ส่วนการส่งข้อมูลที่จะบันทึกไปยังตัวของหน้า api
  Future<void> saveData(BuildContext context) async {
-    const apiUrl = 'http://localhost/management.php';
+    const apiUrl = 'http://localhost:3000/api/auth/management';
 
     // Extract data from the form
     String bookedby = _nameController.text;

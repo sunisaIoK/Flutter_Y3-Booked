@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage3> {
 
   Future<void> fetchData() async {
     try {
-      final response = await http.get(Uri.parse('http://localhost/manage.php'));
+      final response = await http.get(Uri.parse('http://localhost:3000/api/auth/management'));
 
       if (response.statusCode == 200) {
         final List<dynamic> dataList = json.decode(response.body);

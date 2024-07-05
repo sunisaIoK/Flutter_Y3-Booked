@@ -17,7 +17,7 @@ class _RegisterState extends State<Register> {
   final TextEditingController orgController = TextEditingController();
 
   Future<void> insertData() async {
-    const apiUrl = 'http://localhost/api.php';
+    const apiUrl = 'http://localhost:3000/api/auth/register';
 
     try {
       final response = await http.post(

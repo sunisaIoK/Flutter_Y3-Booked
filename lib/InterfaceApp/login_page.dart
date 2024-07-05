@@ -24,7 +24,7 @@ class _LoginState extends State<Login> {
   late String id; // Declare 'id' variable
   late String passwd; // Declare 'passwd' variable
   Future<void> login(String id, String passwd) async {
-    const apiUrl = 'http://localhost/api.php';
+    const apiUrl = 'http://localhost:3000/api/auth/login';
 
     try {
       final response = await http.post(

@@ -33,7 +33,7 @@ class _DataShowState extends State<DataShow> {
   }
 
   Future<void> fetchData() async {
-    const apiUrl = 'http://localhost/api.php';
+    const apiUrl = 'http://localhost:3000/api/auth/Data_show';
 
     try {
       final response = await http.post(
@@ -74,7 +74,7 @@ class _DataShowState extends State<DataShow> {
   }
 
   Future<void> updateData() async {
-    const apiUrl = 'http://localhost/api.php';
+    const apiUrl = 'http://localhost:3000/api/auth/Data_show';
     try {
       final response = await http.put(
         Uri.parse(apiUrl),
